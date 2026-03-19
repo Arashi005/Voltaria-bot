@@ -1,21 +1,13 @@
-
-/**
- * Sends a predefined image with a caption to the chat.
- * Usage: !image
- */
 module.exports = {
-  name: "image",
-  description: "Send an image.",
-  /**
-   * Sends an image to the user.
-   * @param {object} sock - WhatsApp socket instance
-   * @param {string} from - Sender JID
-   * @param {Array} args - Command arguments
-   */
-  execute: async (sock, from, args) => {
-    await sock.sendMessage(from, {
-      image: { url: "https://www.nexoscreator.tech/logo.png" },
-      caption: "Here is an image!",
-    });
-  },
+    name: 'image',
+    description: 'Send an image from a URL.',
+    alias: ['img', 'pic'],
+    run: async (client, message, args) => {
+        if (!args[0]) return client.sendMessage(message.chatId, '❌ Please provide an image URL.', { quoted: message });
+        try {
+            await client.sendMessage(message.chatId, { image: { url: args[0] }, caption: '✨ Here’s your image!' }, { quoted: message });
+        } catch (err) {
+            client.sendMessage(message.chatId, '⚠️ Failed to send image.', { quoted: message });
+        }
+    }
 };
