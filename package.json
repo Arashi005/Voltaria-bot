@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "axios": "^1.13.6",
+    "fs-extra": "^11.3.4",
+    "openai": "^6.31.0",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "name": "voltaria-bot",
+  "version": "1.0.0",
+  "description": "[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?style=flat-square&color=cyan)](https://nodejs.org/) [![GitHub code](https://img.shields.io/github/languages/code-size/nexoslabs/bot-whatsapp-template.svg?logo=github&style=flat-square&color=cyan)](https://github.com/nexoslabs/bot-whatsapp-template) [![GitHub stars](https://img.shields.io/github/stars/nexoslabs/bot-whatsapp-template.svg?logo=github&style=flat-square&color=cyan)](https://github.com/nexoslabs/bot-whatsapp-template) [![GitHub issues](https://img.shields.io/github/issues/nexoslabs/bot-whatsapp-template?logo=github&style=flat-square&color=cyan)](https://github.com/nexoslabs/bot-whatsapp-template/issues) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?logo=github&style=flat-square&color=cyan)](./LICENSE)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

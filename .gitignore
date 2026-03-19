@@ -1,0 +1,6 @@
+# Ignore Voltaria auth/session files
+auth/
+node_modules/
+*.log
+.env
+
