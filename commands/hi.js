@@ -1,18 +1,12 @@
-
-/**
- * Greets the user with a friendly hello message.
- * Usage: !hi
- */
 module.exports = {
-  name: "hi",
-  description: "Say hello.",
-  /**
-   * Sends a hello message to the user.
-   * @param {object} sock - WhatsApp socket instance
-   * @param {string} from - Sender JID
-   * @param {Array} args - Command arguments
-   */
-  execute: async (sock, from, args) => {
-    await sock.sendMessage(from, { text: "Hello! 👋 I am your bot." });
-  }
+    name: 'hi',
+    description: 'Greet the user with a Voltaria-style message.',
+    alias: ['hello', 'hey'],
+    run: async (client, message, args) => {
+        const user = message.senderName || 'there';
+        client.sendMessage(message.chatId, 
+            `⚡ Hello ${user}! I am Voltaria ⚡\nType .help to see what I can do.`, 
+            { quoted: message }
+        );
+    }
 };
